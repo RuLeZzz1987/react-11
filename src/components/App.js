@@ -5,6 +5,7 @@ import Mailbox from "./Mailbox/Mailbox";
 import Title from "./Title/Title";
 import Product from "./Product";
 import Button from "./Button/Button";
+import SingUpForm from "./SignUpForm/SingUpForm";
 
 const favouriteBooks = [
     {id: 'id-1', name: 'JS for beginners', isAvailable: true},
@@ -13,8 +14,13 @@ const favouriteBooks = [
     {id: 'id-4', name: 'Redux in depth', isAvailable: false},
 ];
 
+function sendForm(form) {
+    console.log(form);
+}
+
 const App = () => (
     <>
+        <SingUpForm submit={sendForm}/>
         <BookList books={favouriteBooks} />
         <Counter step={5} initialValue={5}/>
         <Mailbox unreadMessages={4}/>
