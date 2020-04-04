@@ -1,0 +1,21 @@
+@value main-color from '../../variables.module.css';
+
+.root {
+    border: 1px green solid;
+}
+
+.name,
+.quantity {
+    color: main-color;
+    font-style: italic;
+}
+
+.inStock {
+    composes: quantity;
+    color: greenyellow;
+}
+
+.notInStock {
+    composes: quantity;
+    color: red;
+}
